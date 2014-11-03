@@ -1,0 +1,10 @@
+theta=grad;
+W1 = reshape(theta(1:hiddenSize*visibleSize), hiddenSize, visibleSize);
+W2 = reshape(theta(hiddenSize*visibleSize+1:2*hiddenSize*visibleSize), visibleSize, hiddenSize);
+b1 = theta(2*hiddenSize*visibleSize+1:2*hiddenSize*visibleSize+hiddenSize);
+b2 = theta(2*hiddenSize*visibleSize+hiddenSize+1:end);
+theta=numgrad;
+W11 = reshape(theta(1:hiddenSize*visibleSize), hiddenSize, visibleSize);
+W22 = reshape(theta(hiddenSize*visibleSize+1:2*hiddenSize*visibleSize), visibleSize, hiddenSize);
+b11 = theta(2*hiddenSize*visibleSize+1:2*hiddenSize*visibleSize+hiddenSize);
+b22 = theta(2*hiddenSize*visibleSize+hiddenSize+1:end);
